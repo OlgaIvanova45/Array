@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Массив</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		function randomBetween(min, max) {
+            if (min < 0) {
+                return min + Math.random() * (Math.abs(min)+max);
+            } else {
+                return min + Math.random() * max;
+            }
+        };
+
+		var arr = new Array (5);
+		
+		function fillArray (arr) {
+			for (var i = 0; i < arr.length; i++) {
+			
+			arr[i] = Math.floor(randomBetween(-100, 100));
+			var num = arr[i];
+			//console.log(num);
+		};
+
+		return arr;
+		}
+		
+		
+
+		function replaceFromArray (arr) {
+		    for (var j = 0; j < arr.length; j++) {
+		    	if (arr[j] < 0) {
+		    	    arr[j] = 0;
+		        }
+
+		    };
+		   return arr[j];
+		};
+
+		
+		
+
+		function addToArray (arr) {
+			for (var k = 0; k < arr.length; k++) {
+
+				if (k % 2 == 0 && arr[k] == 0) {
+					arr.splice(k+1, 0, -1);
+				}  
+
+			}
+		}
+		
+		fillArray(arr);
+		replaceFromArray(arr);
+		//console.log(arr);
+		addToArray(arr);
+		console.log(arr);
+
+	</script>
+</body>
+</html>
